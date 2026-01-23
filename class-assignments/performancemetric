@@ -1,0 +1,16 @@
+# Ask the user for their performance metrics
+activations = float(input("Enter your Activations performance score: "))
+p360 = float(input("Enter your P360 performance score: "))
+accessories = float(input("Enter your Accessories performance score: "))
+csat = float(input("Enter your CSAT score (out of 10): "))
+
+# Calculate the overall rank score using the weighted formula
+rank_score = (
+    0.60 * activations +
+    0.15 * p360 +
+    0.10 * accessories +
+    0.15 * csat
+)
+
+# result
+print("\nYour overall rank score is:", round(rank_score, 3))
