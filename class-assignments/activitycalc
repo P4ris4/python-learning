@@ -1,0 +1,40 @@
+activity = input("Would you like to cycle, jog, or swim? ").lower()
+weight_in_lbs = float(input("What is your weight in pounds? "))
+calories_to_burn = float(input("How many calories would you like to burn? "))
+
+if activity == "cycle":
+	if weight_in_lbs < 140:
+		calories_per_min = 5.5
+	elif weight_in_lbs < 160:
+		calories_per_min = 6.4
+	elif weight_in_lbs < 180:
+		calories_per_min = 7.3
+	else:
+		calories_per_min = 8.2
+		
+elif activity == "jog":
+	if weight_in_lbs < 140:
+		calories_per_min = 9.3
+	elif weight_in_lbs < 160:
+		calories_per_min = 10.8
+	elif weight_in_lbs < 180:
+		calories_per_min = 12.4
+	else:
+		calories_per_min = 13.9
+		
+elif activity == "swim":
+	if weight_in_lbs < 140:
+		calories_per_min = 7.8
+	elif weight_in_lbs < 160:
+		calories_per_min = 9.0
+	elif weight_in_lbs < 180:
+		calories_per_min = 10.3
+	else:
+		calories_per_min = 11.6
+
+minutes_needed = int(calories_to_burn / calories_per_min)
+
+print(
+	f"You will need to {activity} for {minutes_needed} minutes "
+	f"to burn {calories_to_burn:.1f} calories."
+)
