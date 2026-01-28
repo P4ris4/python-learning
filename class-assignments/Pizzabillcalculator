@@ -1,0 +1,33 @@
+#in this assignment we have multiple if statment
+print("Welcome to python pizza deliveries!")
+size = input("what size pizza do you want? S, M or L: ")
+pepperoni = input("would you like pepperoni on your pizza? Y or N: ")
+extra_cheese = input("Do you want extra cheese? Y or N: ")
+bill = 0
+
+#if statment to check the size and the bill is set to 0
+if size == "S":
+	bill += 15
+	print("small pizza is $15")
+elif size == "M":
+	bill += 20
+	print("medium pizza is $20")
+elif size == "L":
+	bill += 25
+	print("large pizza is $25")
+else:
+	print("you typed a wrong size")
+
+#second if statement to check if they like pepperoni or not	
+if pepperoni == "Y":
+	if size == "S":
+		bill += 2
+	else:
+		bill += 3
+
+#last if statment is for the extra cheese
+if extra_cheese == "Y":
+	bill += 1
+
+#formated if statement to print the final bill based on their customization.
+print(f"your final bill is: ${bill}.")
